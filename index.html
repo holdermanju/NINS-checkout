@@ -136,7 +136,7 @@ else { paymentButton.disabled=true; statusMsg("Sandbox checkout paused while vie
    msg('Verifying card securely with Square Production...');
    const t=await prodCard.tokenize({amount:'1.00',currencyCode:'USD',intent:'CHARGE',customerInitiated:true,sellerKeyedIn:false});
    if(t.status!=='OK')throw new Error('Card tokenization failed. Check the card fields.');
-   const r=await fetch('/.netlify/functions/production-test',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sourceId:t.token,testKey:key,confirmRealCharge:true,idempotencyKey:crypto.randomUUID()})});
+   const r=await fetch('/.netlify/functions/square-payment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'production',sourceId:t.token,testKey:key,confirmRealCharge:true,idempotencyKey:crypto.randomUUID()})});
    const data=await r.json();if(!r.ok||!data.ok)throw new Error(data.message+(data.code?' ('+data.code+')':''));
    msg('SUCCESS: REAL $1.00 production payment '+data.status+'. Payment ID: '+data.paymentId+'. Verify it in your live Square Dashboard.');
    btn.textContent='Test completed';
