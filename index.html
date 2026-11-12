@@ -134,7 +134,14 @@ else { paymentButton.disabled=true; statusMsg("Sandbox checkout paused while vie
   btn.disabled=true;
   try{
    msg('Verifying card securely with Square Production...');
-   const t=await prodCard.tokenize({amount:'1.00',currencyCode:'USD',intent:'CHARGE',customerInitiated:true,sellerKeyedIn:false});
+   const t=await prodCard.tokenize({
+  amount:'1.00',
+  currencyCode:'USD',
+  intent:'CHARGE',
+  billingContact:{countryCode:'US'},
+  customerInitiated:true,
+  sellerKeyedIn:false
+});
    if(t.status!=='OK') {
   const details=(t.errors||[]).map(e=>
     [e.code,e.message].filter(Boolean).join(': ')
