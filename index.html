@@ -161,14 +161,42 @@ else { paymentButton.disabled=true; statusMsg("Sandbox checkout paused while vie
   btn.disabled=true;
   try{
    msg('Verifying card securely with Square Production...');
-   const t=await prodCard.tokenize({
-  amount:'1.00',
-  currencyCode:'USD',
-  intent:'CHARGE',
-  billingContact:{countryCode:'US'},
-  customerInitiated:true,
-  sellerKeyedIn:false
+   
+const fullName = document.getElementById('nins-billing-name').value.trim();
+const email = document.getElementById('nins-billing-email').value.trim();
+const postalCode = document.getElementById('nins-billing-zip').value.trim();
+
+if (!fullName || !email || !postalCode) {
+  throw new Error('Please enter your full name, email address, and billing ZIP code.');
+}
+
+if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  throw new Error('Please enter a valid email address.');
+}
+
+if (!/^\d{5}(-\d{4})?$/.test(postalCode)) {
+  throw new Error('Please enter a valid US billing ZIP code.');
+}
+
+const nameParts = fullName.split(/\s+/);
+const givenName = nameParts.shift();
+const familyName = nameParts.join(' ');
+
+const t = await prodCard.tokenize({
+  amount: '1.00',
+  currencyCode: 'USD',
+  intent: 'CHARGE',
+  billingContact: {
+    givenName: givenName,
+    familyName: familyName,
+    email: email,
+    countryCode: 'US',
+    postalCode: postalCode
+  },
+  customerInitiated: true,
+  sellerKeyedIn: false
 });
+
    if(t.status!=='OK') {
   const details=(t.errors||[]).map(e=>
     [e.code,e.message].filter(Boolean).join(': ')
