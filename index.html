@@ -107,6 +107,33 @@ else { paymentButton.disabled=true; statusMsg("Sandbox checkout paused while vie
  <p>This is a temporary administrator-authorized test on the same NINS website. Only use a card with the cardholder's explicit permission.</p>
  <label for="nins-live-key" style="display:block;font-weight:650;margin-bottom:6px">Private administrator test passphrase</label>
  <input id="nins-live-key" type="password" autocomplete="off" style="display:block;width:100%;padding:12px;border-radius:7px;border:1px solid #bccade" placeholder="Enter the passphrase stored in Netlify" />
+   
+<div style="display:grid;gap:12px;margin-top:16px">
+  <label>
+    Cardholder's full name
+    <input id="nins-billing-name" type="text"
+      autocomplete="cc-name" required
+      placeholder="Name on card"
+      style="display:block;width:100%;padding:12px">
+  </label>
+
+  <label>
+    Email address for receipt
+    <input id="nins-billing-email" type="email"
+      autocomplete="email" required
+      placeholder="customer@example.com"
+      style="display:block;width:100%;padding:12px">
+  </label>
+
+  <label>
+    Billing ZIP code
+    <input id="nins-billing-zip" type="text"
+      autocomplete="postal-code" required
+      placeholder="Billing ZIP"
+      style="display:block;width:100%;padding:12px">
+  </label>
+</div>
+
  <div id="nins-live-card" style="min-height:95px;margin:16px 0"></div>
  <label style="display:block;margin:12px 0"><input type="checkbox" id="nins-live-agree" /> The cardholder explicitly approves a real $1.00 charge.</label>
  <button type="button" id="nins-live-pay" disabled style="border:0;border-radius:8px;padding:14px;color:white;background:#075dbe;width:100%;font-weight:700">Charge $1.00 REAL money (Square Production)</button>
