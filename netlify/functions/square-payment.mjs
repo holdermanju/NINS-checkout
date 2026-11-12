@@ -1,147 +1,157 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0d1b31"><title>NINS | Security Equipment Checkout</title><style>
-:root{--navy:#0d1b31;--blue:#0866dc;--sky:#eaf3ff;--ink:#17263a;--muted:#64748b;--border:#dae3ee;--bg:#f5f8fc}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.5}button{font:inherit;cursor:pointer}.wrap{max-width:1140px;margin:auto;padding:0 24px}.topline{background:var(--navy);color:#e7f1ff;text-align:center;padding:9px;font-size:12px;letter-spacing:.025em}.head{background:#fff;border-bottom:1px solid var(--border)}.headinner{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:88px}.logo{width:182px;max-width:50vw;height:auto}.headright{text-align:right;font-size:12px;color:var(--muted)}.headright b{color:var(--navy);display:block;font-size:13px}.hero{background:linear-gradient(115deg,#0c213d,#0b3261 67%,#115ac2);color:#fff;padding:56px 0 52px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-110px;top:-250px;width:520px;height:520px;border:1px solid #ffffff40;border-radius:50%;box-shadow:0 0 0 72px #ffffff09,0 0 0 146px #ffffff08}.hero .wrap{position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-weight:750;color:#b1d4ff;font-size:11px}.hero h1{font-size:clamp(32px,5.2vw,54px);max-width:710px;letter-spacing:-.055em;line-height:1.07;margin:12px 0 16px}.hero p{max-width:700px;color:#d6e5f7;margin:8px 0;font-size:15px}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.chip{border:1px solid #ffffff3b;color:#e9f5ff;padding:7px 12px;border-radius:60px;font-size:12px;font-weight:650}.strip{background:#e8f2ff;border-bottom:1px solid #d2e5fc;padding:12px 0;color:#294b78;font-size:13px}.strip .wrap{display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap}.main{padding-top:35px}.heading{font-size:26px;letter-spacing:-.035em;margin:0}.lead{color:var(--muted);margin:6px 0 20px;font-size:14px}.packs{display:grid;grid-template-columns:1fr 1fr;gap:18px}.pack{position:relative;text-align:left;border-radius:18px;border:2px solid var(--border);background:#fff;padding:25px;box-shadow:0 8px 24px #182b4508}.pack.sel{border-color:var(--blue);box-shadow:0 0 0 3px #0866dc14,0 14px 35px #182b4512}.pack small{font-size:11px;text-transform:uppercase;color:#2860b0;letter-spacing:.13em;font-weight:850}.pack h3{font-size:24px;margin:12px 0 4px;letter-spacing:-.035em}.pack .feature{font-size:13px;color:#53687b;min-height:42px}.pack .price{font-size:33px;font-weight:850;letter-spacing:-.05em;margin-top:16px;color:var(--navy)}.pack .sub{font-size:12px;color:var(--muted)}.pill{display:inline-flex;align-items:center;gap:7px;font-weight:800;color:var(--blue);margin-top:18px;font-size:13px}.radio{height:17px;width:17px;border:2px solid #b4c5d9;border-radius:50%;display:inline-block}.sel .radio{border:5px solid var(--blue)}.sec{margin-top:35px}.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 7px 22px #132a4209;overflow:hidden}.accord{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff;border:0;padding:21px 24px;width:100%;text-align:left}.accord strong{font-size:17px}.accord small{font-size:12px;color:var(--muted);display:block;margin-top:3px}.arrow{color:var(--blue);font-size:24px;transition:transform .2s}.expanded .arrow{transform:rotate(180deg)}.inventory{border-top:1px solid var(--border);padding-bottom:6px}.group{background:#f1f6fd;padding:10px 22px;font-size:11px;font-weight:850;text-transform:uppercase;color:#49617c;letter-spacing:.09em}.item{display:grid;grid-template-columns:minmax(0,1fr) 54px 115px;gap:12px;align-items:center;padding:15px 22px;border-top:1px solid #e8edf4}.itemname{font-size:14px;font-weight:700}.sku{font-size:11px;color:#77889a}.pricecol{text-align:right;font-size:13px;font-weight:750;font-variant-numeric:tabular-nums}.qty{text-align:right;color:#64748b;font-size:12px}.pending{color:#906d29;font-size:12px;font-weight:650}.spec{padding:0 22px 16px;font-size:12px;color:#53667c;background:#fbfdff}.spec p{margin:0 0 8px}.specbutton{background:none;border:0;padding:3px 0;color:var(--blue);font-size:12px;text-decoration:underline;text-underline-offset:3px}.summary{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;margin:32px 0 45px}.sumcard,.paycard{background:#fff;border:1px solid var(--border);border-radius:18px;padding:25px;box-shadow:0 8px 22px #132a4209}.sumcard h2,.paycard h2{margin:5px 0 13px;font-size:23px;letter-spacing:-.035em}.over{color:#58718b;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.12em}.line{display:flex;align-items:start;justify-content:space-between;gap:18px;margin:12px 0;font-size:14px}.line .key{color:#5c6d7e}.line b{white-space:nowrap;font-variant-numeric:tabular-nums}.divide{border:0;border-top:1px solid var(--border);margin:16px 0}.tax{background:#eff7ff;padding:13px;border-radius:10px}.tax .line{margin:0}.final{font-size:20px;font-weight:850}.notice{background:#fff9ea;border:1px solid #f0dca8;border-radius:12px;padding:13px 15px;color:#6b542d;font-size:12px;margin-top:15px}.fine{font-size:12px;color:var(--muted);line-height:1.65}.paybrand{font-size:12px;color:#65778a;display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.paybrand span{padding:6px 8px;border:1px solid #d9e2ed;border-radius:5px;font-weight:750;color:#33445c}.disabled{background:#edf2f7;border-radius:11px;border:1px dashed #b8c5d5;padding:17px;font-size:13px;color:#53667a}.paybutton{background:#9eacbe;color:#fff;border:0;width:100%;padding:14px;border-radius:9px;font-weight:750;margin-top:15px;cursor:not-allowed}.footer{background:#101e34;color:#c4d0dc;padding:30px 0 37px;font-size:12px}.footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.hidden{display:none!important}.separate{margin-top:15px;background:#f2f5f9;border-radius:10px;padding:11px 13px}.sephead{font-size:12px;font-weight:800;color:#4b5c70;margin-bottom:6px}.separate .line{margin:5px 0;font-size:12px}@media(max-width:700px){.wrap{padding:0 15px}.headinner{min-height:78px}.logo{width:146px}.headright{font-size:10px}.headright b{font-size:11px}.hero{padding:37px 0 34px}.packs,.summary{grid-template-columns:1fr}.pack{padding:20px}.pack .price{font-size:29px}.accord{padding:18px}.item{grid-template-columns:minmax(0,1fr) 35px 90px;padding:13px 15px;gap:8px}.group{padding:9px 15px}.sumcard,.paycard{padding:20px}}@media print{.paycard{display:none}.packs .pack:not(.sel){display:none}.hero{background:#fff;color:#000}.hero p,.hero .eyebrow{color:#555}}
-.testbanner{margin:10px 0 15px;padding:11px 13px;border-radius:9px;background:#fff5df;border:1px solid #f1d29e;color:#744b12;font-size:12px}.paybutton.active{background:#0b60c9;cursor:pointer}.paybutton.active:disabled{background:#91a5bc;cursor:not-allowed}#square-card-container{min-height:75px;margin:14px 0}#square-status.error{color:#a42e23}#square-status.ok{color:#206c4a}</style><script src="https://sandbox.web.squarecdn.com/v1/square.js" defer></script></head><body><div class="topline">SECURE EQUIPMENT ORDER PORTAL · DEDICATED CHECKOUT</div><header class="head"><div class="wrap headinner"><div><img src="nins-logo.png" class="logo" alt="NINS logo"></div><div class="headright"><b>Dedicated equipment checkout</b>Prepared for Novella Innovations</div></div></header><section class="hero"><div class="wrap"><div class="eyebrow">Private project equipment order</div><h1>Security camera equipment, carefully selected for your property.</h1><p>This dedicated checkout page is provided by <strong>NINS for Novella Innovations</strong> to securely complete the purchase of equipment selected and quoted for your security camera installation.</p><p>Review your selected equipment package, explore the included components, and complete your payment securely.</p><div class="chips"><span class="chip">✓ 22-camera system in either option</span><span class="chip">✓ Complete equipment specifications</span><span class="chip">✓ Secure Square checkout when activated</span></div></div></section><div class="strip"><div class="wrap"><span>▣ Equipment procurement coordinated by your installer</span><span>▣ Estimated delivery: 5–7 business days after ordering, subject to availability</span></div></div><main class="wrap main"><section><h2 class="heading">Choose your surveillance system</h2><p class="lead">Both packages include 21 PTZ cameras and one dedicated license plate reader. The difference is the camera technology, switching and storage capacity.</p><div class="packs"><button class="pack sel" data-pkg="mid" aria-pressed="true"><small>Option 01 · 4K PTZ protection</small><h3>Mid-Tier Surveillance</h3><div class="feature"><strong>21 × 4K PTZ cameras + 1 license plate reader</strong><br>16× optical zoom, automatic tracking, 60TB raw storage.</div><div class="price">$23,447.95</div><div class="sub">Preliminary equipment budget before estimated sales tax</div><span class="pill"><span class="radio"></span> Select Mid-Tier</span></button><button class="pack" data-pkg="premium" aria-pressed="false"><small>Option 02 · Panoramic premium protection</small><h3>Premium Surveillance</h3><div class="feature"><strong>21 × panoramic 16MP + 4K PTZ cameras + 1 license plate reader</strong><br>Dual-view coverage, 16× optical zoom, advanced camera tracking and 100TB raw storage.</div><div class="price">$39,588.93</div><div class="sub">Preliminary equipment budget before estimated sales tax</div><span class="pill"><span class="radio"></span> Select Premium</span></button></div></section><section class="sec"><h2 class="heading">Equipment details</h2><p class="lead">View all products assigned to the selected package, their quantities, pricing status and technical specifications.</p><div class="card" id="inventoryCard"><button class="accord" id="listToggle" type="button" aria-expanded="false"><span><strong id="listTitle">Mid-Tier equipment breakdown</strong><small id="itemCount">Click to review included equipment</small></span><span class="arrow">⌄</span></button><div id="inventory" class="inventory hidden"><div id="items"></div><div class="notice" style="margin:12px 16px 18px">Certain selected components are still awaiting final supplier pricing. Additional survey-dependent items appear for transparency but are not included in the preliminary payable equipment amount.</div></div></div></section><section class="summary"><div class="sumcard"><div class="over">Order estimate</div><h2 id="summaryTitle">Mid-Tier</h2><div class="line"><span class="key">21 PTZ cameras</span><b id="cameraTotal">$14,679.00</b></div><div class="line"><span class="key">Other selected equipment allowance</span><b id="otherTotal">$8,768.95</b></div><hr class="divide"><div class="line"><span class="key">Preliminary equipment subtotal</span><b id="equipSubtotal">$23,447.95</b></div><div class="tax"><div class="line"><span class="key">Estimated Georgia sales tax (7%)</span><b id="salesTax">$1,641.36</b></div></div><div class="line final"><span>Equipment total with estimated tax</span><b id="taxTotal">$25,089.31</b></div><div class="notice"><strong>Equipment only. Not the full installation price.</strong> This is a preliminary total for the equipment allowance currently listed. Additional fiber-optic cable, mounting components, compatible connectivity accessories and other site-specific materials will be priced after the survey and billed separately following approval. Tax shown is an estimate, pending final tax treatment and invoicing.</div><div class="separate"><div class="sephead">Additional charges, not being collected in this equipment checkout</div><div class="line"><span class="key">Installation labor (separate)</span><b>$18,000.00</b></div><div class="line"><span class="key">Site survey (separate)</span><b>$600.00</b></div><div class="line"><span class="key">Other materials after survey</span><b>To be determined</b></div></div><p class="fine">Pricing is a proposal preview, not a completed invoice. Final applicable tax and equipment scope must be confirmed before a payment request is issued.</p></div><div class="paycard"><div class="over">Square sandbox integration</div><h2>Secure checkout</h2><p class="fine">The payment form is currently in <strong>testing mode only</strong>. Selecting either package tests its full estimated equipment-and-tax amount without moving real money. This is not a live equipment order.</p><div class="paybrand"><span>VISA</span><span>Mastercard</span><span>AMEX</span><span>Discover</span></div><div class="testbanner"><strong>TEST MODE · No real charges</strong><br>Use only an official Square Sandbox test card. Never enter a personal or customer credit card on this test page.</div><div id="square-card-container" aria-label="Square Sandbox card entry"></div><p id="square-status" role="status" class="fine">Checking whether the secure test payment function is deployed…</p><button class="paybutton" id="square-pay" type="button" disabled>Sandbox testing unavailable until backend is connected</button><p class="fine">The secure card fields are supplied by Square. The server stores your Sandbox token privately. No customer account or shipping information is required. <strong>Live equipment payments remain disabled</strong> until final pricing and tax have been approved.</p></div></section></main><footer class="footer"><div class="wrap"><div><strong>NINS</strong> · Dedicated checkout for Novella Innovations<br>Security equipment order portal</div><div>Private equipment-order page · No public storefront navigation</div></div></footer><script>
-const docs={
-'MIDCAM':['4K 8MP · 16× optical zoom · motorized PTZ · auto tracking · PoE+ · network recording integration subject to testing','https://www.amazon.com/dp/B0DPWXSLQH'],
-'PREMCAM':['Panoramic 16MP plus 4K PTZ lens · 16× optical zoom · multi-lens vehicle tracking · high-power PoE; final power and mounting compatibility subject to testing','https://www.amazon.com/dp/B0GHX3WCV8'],
-'LPR':['Dedicated 4MP plate-recognition camera · 8–32mm varifocal lens · PoE. Plate metadata integration to be tested.','https://www.amazon.com/dp/B0FKGMVNVL'],
-'MIDSW':['TP-Link SG2210MP · 8-port Gigabit managed PoE+ · two 1G SFP slots · 150W total budget.','https://www.amazon.com/dp/B08JB1C41Y'],
-'PREMSW':['POEPower PPS-4G2G-BT1 · four ports rated up to 90W each · 250W shared budget · Gigabit copper uplinks.','https://www.amazon.com/dp/B0FPJ18NXB'],
-'HDD':['20TB WD Red Pro · 7200RPM SATA 6Gb/s CMR. Each drive has the same customer unit price in both packages.','https://www.amazon.com/dp/B0DYQH22PW'],
-'DAS':['Five-bay powered USB-C direct-attached storage enclosure; five independent SATA drive bays.','https://www.amazon.com/dp/B0G8DVLMFQ'],
-'BI':['Windows video recording and camera-management software license. Camera PTZ and LPR interoperability subject to commissioning.','https://blueirissoftware.com/'],
-'CAT':['Syston 1795-SP-BK-1000 · 1,000ft outdoor direct-burial solid-copper shielded cable per box. Three boxes total. Indoor cable routing and 90W PoE suitability to verify.','https://www.homedepot.com/p/Syston-Cable-Technology-1000-ft-Cat-6e-Direct-Burial-Shielded-Ethernet-Network-Cable-Solid-Copper-Outdoor-600MHz-Dual-Layer-Jacket-Black-1795-SP-BK-1000/337755452'],
-'EXT':['Real HD PE60-2P IP67 PoE extender, up to 90W input with two outputs. Actual power over long runs is subject to field testing.','https://www.amazon.com/dp/B0FS1FTPNM'],
-'BOX':['QILIPSU IP67 equipment enclosure · approx. 11.2 × 7.7 × 5.1in.','https://www.amazon.com/dp/B08B5QN2LS'],
-'MIDSFP':['BiDi one-strand Gigabit single-mode SFP transceiver matched pair. Check compatibility with switch and fiber end faces.','https://www.amazon.com/dp/B0D8154XXD'],
-'PREMFIBER':['BiDi gigabit single-strand external media converter matched pair. Confirm final fiber topology and available house switch ports.','https://www.amazon.com/dp/B07SBD2T4F'],
-'AGG':['Real HD 8-port SFP+ fiber aggregation switch. 1G BiDi support and copper LAN uplink module subject to verification.','https://www.amazon.com/dp/B0DKF9NMZC'],
-'RJ':['Cable Matters Cat6A shielded RJ45 50-plug pack with boots; confirm fit for selected 23 AWG cable.','https://www.amazon.com/dp/B00E4OCOUW'],
-'POST':['Nine treated wood posts to be sourced locally by the owner or designated contractor; NOT included in equipment payment. Footings/size to be approved.',''],
-'MOUNT':['Offset / gooseneck post-mounted bracket solution; exact structural design, camera hole pattern and wind rating pending survey.',''],
-'FAST':['Corrosion-resistant structural mounting fasteners and backing hardware for post brackets; specified after survey.',''],
-'BUILD':['Camera mount hardware and weatherproof entry parts for house and dock locations; quantity to be confirmed.',''],
-'FIBERC':['Outdoor OS2 single-mode fiber cable measured to actual routes before ordering. Price not included.',''],
-'MISC':['Cable glands, conduit, drip loops, boxes, weather seals, fiber patching and other required small installation components. Price not included.','']
-};
-// Customer-facing proposed unit prices are shown only where the project has a saved unit quote.
-// The higher package budget is a planning allowance, NOT the exact sum of these partial unit quotes.
-const common=[
-['LPR','Dedicated license plate camera',1,615.14,'Cameras & software'],['BI','Blue Iris 6 recording license',1,100,'Cameras & software'],
-['DAS','Five-bay USB-C recording enclosure',1,275.99,'Storage'],['CAT','Syston outdoor Cat6e cable · 1,000ft box',3,520,'Network & cabling'],
-['EXT','Outdoor high-power PoE extenders',4,null,'Network & cabling'],['BOX','Outdoor weatherproof enclosures',4,47.99,'Network & cabling'],['AGG','Central fiber aggregation switch',1,null,'Network & cabling'],['RJ','Shielded RJ45 connector kit · 50-pack',1,null,'Network & cabling']];
-const survey=[['POST','Treated 4×4 driveway posts · locally supplied',9,null,'Survey-dependent / supplied locally'],['MOUNT','Heavy-duty offset camera mounts',9,null,'Survey-dependent / supplied locally'],['FAST','Structural mounting bolt/hardware sets',9,null,'Survey-dependent / supplied locally'],['BUILD','House and dock mounting hardware locations',13,null,'Survey-dependent / supplied locally'],['FIBERC','Measured outdoor single-mode fiber cable',1,null,'Survey-dependent / supplied locally'],['MISC','Conduit, glands and other installation supplies',1,null,'Survey-dependent / supplied locally']];
-const catalogs={
-mid:[['MIDCAM','Professional 4K 16× PTZ camera',21,699,'Cameras & software'],...common,['HDD','WD Red Pro 20TB drive',3,1027.99,'Storage'],['MIDSW','Managed PoE+ Gigabit switch',7,332.57,'Network & cabling'],['MIDSFP','Single-strand BiDi fiber module pair',3,null,'Network & cabling'],...survey],
-premium:[['PREMCAM','Panoramic + 16× PTZ camera',21,1444.86,'Cameras & software'],...common,['HDD','WD Red Pro 20TB drive',5,1027.99,'Storage'],['PREMSW','High-power 90W PoE++ switch',7,null,'Network & cabling'],['PREMFIBER','Single-strand fiber converter pair',3,null,'Network & cabling'],...survey]
+
+import { timingSafeEqual } from "node:crypto";
+
+const SITE = "https://nins-checkout.netlify.app";
+const SANDBOX_LOCATION = "LDSSY825P3VN5";
+const PRODUCTION_LOCATION = "LZWVJM7W8BSQG";
+
+const SANDBOX_PRICES = {
+  mid: 2508931,
+  premium: 4236016
 };
 
-let selected='mid';let listOpen=false;const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n);const escapeHtml=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-function draw(){let prem=selected==='premium';document.querySelectorAll('.pack').forEach(el=>{let active=el.dataset.pkg===selected;el.classList.toggle('sel',active);el.setAttribute('aria-pressed',String(active))});document.getElementById('listTitle').textContent=(prem?'Premium':'Mid-Tier')+' complete equipment breakdown';let rows=catalogs[selected];document.getElementById('itemCount').textContent=rows.length+' equipment and site-material lines · tap to '+(listOpen?'collapse':'expand');document.getElementById('summaryTitle').textContent=prem?'Premium Surveillance':'Mid-Tier Surveillance';let camera=prem?30342:14679,other=prem?9246.93:8768.95,sub=+(camera+other).toFixed(2),tax=+(sub*.07).toFixed(2);document.getElementById('cameraTotal').textContent=money(camera);document.getElementById('otherTotal').textContent=money(other);document.getElementById('equipSubtotal').textContent=money(sub);document.getElementById('salesTax').textContent=money(tax);document.getElementById('taxTotal').textContent=money(sub+tax);let markup='',oldGroup='';for(let [key,name,qty,unit,group] of rows){if(group!==oldGroup){markup+=`<div class="group">${escapeHtml(group)}</div>`;oldGroup=group;}let spec=docs[key]?.[0]||'Additional site-specific material, subject to site survey.';let price=unit===null?'<span class="pending">Price pending</span>':money(unit*qty);if(key==='PREMCAM')price=money(30342);if(key==='MIDSW')price=money(2328);let customerSupplied=key==='POST';let notIncluded=group==='Survey-dependent / supplied locally';let note=customerSupplied?'Customer supplied · not billed':notIncluded?'Survey-dependent · not yet priced':unit===null?'Selected equipment · supplier price pending':'Included in preliminary priced lines';markup+=`<div class="item"><div><div class="itemname">${escapeHtml(name)}</div><div class="sku">${escapeHtml(note)} · <button type="button" class="specbutton" data-detail="${key}">Specifications +</button></div></div><div class="qty">× ${qty}</div><div class="pricecol">${notIncluded?'<span class="pending">Later</span>':price}</div></div><div class="spec hidden" data-spec="${key}"><p>${escapeHtml(spec)}</p><span class="sku">Reference: ${escapeHtml(key)}</span></div>`;}document.getElementById('items').innerHTML=markup;document.getElementById('inventory').classList.toggle('hidden',!listOpen);document.getElementById('inventoryCard').classList.toggle('expanded',listOpen);document.getElementById('listToggle').setAttribute('aria-expanded',String(listOpen));}
-document.querySelectorAll('.pack').forEach(p=>p.addEventListener('click',()=>{selected=p.dataset.pkg;listOpen=false;draw()}));document.getElementById('listToggle').addEventListener('click',()=>{listOpen=!listOpen;draw()});document.getElementById('items').addEventListener('click',e=>{const btn=e.target.closest('button[data-detail]');if(!btn)return;const el=[...document.querySelectorAll('[data-spec]')].find(x=>x.dataset.spec===btn.dataset.detail);if(el)el.classList.toggle('hidden');});draw();
+function reply(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-store"
+    }
+  });
+}
 
-// Square SANDBOX only. Values below are public application/location IDs, NEVER access tokens.
-const sandboxAppId = 'sandbox-sq0idb-RwZa-Ooe1_WxM_buliUULQ';
-const sandboxLocationId = 'LDSSY825P3VN5';
-// These exact cents are *temporary test fixtures* and must be reconciled before any production payments.
-const SANDBOX_TEST_AMOUNTS = Object.freeze({mid:2508931, premium:4236016});
-let sandboxCard = null;
-const paymentStatus = document.getElementById('square-status');
-const paymentButton = document.getElementById('square-pay');
-function statusMsg(message, kind='') {
-  paymentStatus.textContent = message;
-  paymentStatus.className = 'fine ' + kind;
+function sameSecret(a, b) {
+  if (!a || !b || a.length !== b.length) return false;
+  return timingSafeEqual(
+    Buffer.from(a),
+    Buffer.from(b)
+  );
 }
-function refreshPayButton() {
-  if (!sandboxCard) return;
-  const amount = SANDBOX_TEST_AMOUNTS[selected] / 100;
-  paymentButton.textContent = `Test ${money(amount)} in Square Sandbox (no real charge)`;
-}
-async function initializeSandboxCheckout() {
+
+export default async function handler(request) {
+  if (request.method === "GET") {
+    return reply({
+      mode: "sandbox",
+      ready: Boolean(process.env.SQUARE_ACCESS_TOKEN),
+      realPaymentsEnabled: false,
+      productionTestAvailable: Boolean(
+        process.env.SQUARE_PRODUCTION_ACCESS_TOKEN &&
+        process.env.NINS_LIVE_TEST_KEY
+      )
+    });
+  }
+
+  if (request.method !== "POST") {
+    return reply({ ok: false, message: "Method not allowed" }, 405);
+  }
+
+  const origin = request.headers.get("origin");
+  if (origin !== SITE) {
+    return reply({ ok: false, message: "Invalid origin" }, 403);
+  }
+
+  if (!request.headers.get("content-type")?.startsWith("application/json")) {
+    return reply({ ok: false, message: "JSON required" }, 415);
+  }
+
+  let input;
   try {
-    const res = await fetch('/.netlify/functions/square-payment', {cache:'no-store'});
-    if (!res.ok) throw new Error('Payment function not deployed (HTTP ' + res.status + ')');
-    const result = await res.json();
-    if (result.mode !== 'sandbox' || !result.ready) throw new Error('Square Sandbox function is not configured.');
-    if (!window.Square) throw new Error('Square Sandbox card library is unavailable.');
-    const payments = window.Square.payments(sandboxAppId,sandboxLocationId);
-    sandboxCard = await payments.card();
-    await sandboxCard.attach('#square-card-container');
-    paymentButton.classList.add('active');
-    paymentButton.disabled=false;
-    refreshPayButton();
-    statusMsg('Sandbox ready. Use an official Square test card only.', 'ok');
-  } catch(e) {
-    statusMsg('Test checkout is not ready yet: '+e.message, 'error');
-    paymentButton.disabled=true;
+    input = await request.json();
+  } catch {
+    return reply({ ok: false, message: "Invalid JSON" }, 400);
+  }
+
+  const mode = input.mode === "production" ? "production" : "sandbox";
+
+  if (
+    typeof input.sourceId !== "string" ||
+    input.sourceId.length < 5 ||
+    input.sourceId.length > 500 ||
+    typeof input.idempotencyKey !== "string" ||
+    !/^[0-9a-f-]{36}$/i.test(input.idempotencyKey)
+  ) {
+    return reply({ ok: false, message: "Invalid payment request" }, 400);
+  }
+
+  let amount;
+  let location;
+  let token;
+  let endpoint;
+
+  if (mode === "production") {
+    const secret = process.env.NINS_LIVE_TEST_KEY;
+
+    if (
+      input.confirmRealCharge !== true ||
+      typeof input.testKey !== "string" ||
+      !sameSecret(input.testKey, secret)
+    ) {
+      return reply({ ok: false, message: "Unauthorized live test" }, 403);
+    }
+
+    amount = 100;
+    location = PRODUCTION_LOCATION;
+    token = process.env.SQUARE_PRODUCTION_ACCESS_TOKEN;
+    endpoint = "https://connect.squareup.com/v2/payments";
+  } else {
+    if (!Object.hasOwn(SANDBOX_PRICES, input.package)) {
+      return reply({ ok: false, message: "Invalid package" }, 400);
+    }
+
+    amount = SANDBOX_PRICES[input.package];
+    location = SANDBOX_LOCATION;
+    token = process.env.SQUARE_ACCESS_TOKEN;
+    endpoint = "https://connect.squareupsandbox.com/v2/payments";
+  }
+
+  if (!token) {
+    return reply({ ok: false, message: "Payment configuration missing" }, 503);
+  }
+
+  try {
+    const result = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "Square-Version": "2025-10-16"
+      },
+      body: JSON.stringify({
+        source_id: input.sourceId,
+        idempotency_key: input.idempotencyKey,
+        amount_money: {
+          amount,
+          currency: "USD"
+        },
+        location_id: location,
+        autocomplete: true,
+        note: mode === "production"
+          ? "NINS authorized real $1 integration test"
+          : `NINS ${input.package} Sandbox simulation`
+      })
+    });
+
+    const data = await result.json();
+
+    if (!result.ok || !data.payment?.id) {
+      return reply({
+        ok: false,
+        message: "Square did not approve the payment",
+        code: data.errors?.[0]?.code || "UNKNOWN"
+      }, 400);
+    }
+
+    return reply({
+      ok: true,
+      mode,
+      amount,
+      paymentId: data.payment.id,
+      status: data.payment.status
+    });
+  } catch {
+    return reply({
+      ok: false,
+      message: "Could not contact Square"
+    }, 502);
   }
 }
-paymentButton.addEventListener('click', async()=> {
- if(!sandboxCard) return;
- paymentButton.disabled=true;
- const pkg=selected;
- statusMsg('Tokenizing Square Sandbox test card…');
- try {
-  const tokenResult=await sandboxCard.tokenize();
-  if(tokenResult.status !== 'OK') throw new Error('Test-card validation failed. Check the Sandbox card information.');
-  statusMsg('Submitting simulated payment to Square Sandbox…');
-  const response=await fetch('/.netlify/functions/square-payment',{
-   method:'POST',headers:{'Content-Type':'application/json'},
-   body:JSON.stringify({package:pkg, sourceId:tokenResult.token, idempotencyKey:crypto.randomUUID()})
-  });
-  const result=await response.json();
-  if(!response.ok || !result.ok) throw new Error(result.message || 'Sandbox payment was declined.');
-  statusMsg(`Sandbox test approved for ${money(result.amount/100)}. This was NOT a real charge. Test receipt ID: ${result.paymentId}`, 'ok');
- } catch(e) {statusMsg('Sandbox test error: '+e.message,'error');}
- finally {paymentButton.disabled=false;refreshPayButton();}
-});
-document.querySelectorAll('.pack').forEach(p=>p.addEventListener('click',refreshPayButton));
-if (!new URLSearchParams(location.search).has("admin_live_test")) initializeSandboxCheckout();
-else { paymentButton.disabled=true; statusMsg("Sandbox checkout paused while viewing the private $1 production test."); }
-</script>
-<section id="nins-live-test-panel" style="display:none;max-width:780px;margin:25px auto;padding:18px 24px;">
- <div style="background:white;border:2px solid #e1b652;border-radius:14px;padding:22px;box-shadow:0 8px 20px #1232">
- <div style="font-size:12px;letter-spacing:.08em;color:#8d5b13;font-weight:800">ADMINISTRATIVE PAYMENT INTEGRATION TEST</div>
- <h2 style="margin:8px 0">NINS checkout · $1.00 real-payment test</h2>
- <p><strong>This test will charge a real payment card exactly $1.00 USD.</strong> It does not charge the Mid-Tier or Premium package prices above. Those remain preliminary and unapproved for real payments.</p>
- <p>This is a temporary administrator-authorized test on the same NINS website. Only use a card with the cardholder's explicit permission.</p>
- <label for="nins-live-key" style="display:block;font-weight:650;margin-bottom:6px">Private administrator test passphrase</label>
- <input id="nins-live-key" type="password" autocomplete="off" style="display:block;width:100%;padding:12px;border-radius:7px;border:1px solid #bccade" placeholder="Enter the passphrase stored in Netlify" />
- <div id="nins-live-card" style="min-height:95px;margin:16px 0"></div>
- <label style="display:block;margin:12px 0"><input type="checkbox" id="nins-live-agree" /> The cardholder explicitly approves a real $1.00 charge.</label>
- <button type="button" id="nins-live-pay" disabled style="border:0;border-radius:8px;padding:14px;color:white;background:#075dbe;width:100%;font-weight:700">Charge $1.00 REAL money (Square Production)</button>
- <p id="nins-live-result" role="status" aria-live="polite" style="overflow-wrap:anywhere;white-space:pre-wrap;font-size:14px"></p>
- </div>
-</section>
-<script>
-(async function initializeAdminLiveTest(){
- if(!new URLSearchParams(location.search).has('admin_live_test'))return;
- const panel=document.getElementById('nins-live-test-panel');panel.style.display='block';
- const result=document.getElementById('nins-live-result'),btn=document.getElementById('nins-live-pay');
- const msg=s=>{result.textContent=s};
- let prodCard;
- try{
-  await new Promise((resolve,reject)=>{let script=document.createElement('script');script.src='https://web.squarecdn.com/v1/square.js';script.onload=resolve;script.onerror=()=>reject(new Error('Square Production card library unavailable'));document.head.appendChild(script)});
-  const payments=window.Square.payments('sq0idp-qkHoYRoSdkYf7X_2QYTwfw','LZWVJM7W8BSQG');
-  prodCard=await payments.card();await prodCard.attach('#nins-live-card');btn.disabled=false;
-  msg('Real-payment form ready. This test will charge $1.00, not a camera package price.');
- }catch(error){msg('Setup error: '+error.message);return}
- btn.addEventListener('click',async()=>{
-  const key=document.getElementById('nins-live-key').value;
-  if(key.length<20){msg('Enter the private test passphrase first.');return}
-  if(!document.getElementById('nins-live-agree').checked){msg('Confirm cardholder authorization first.');return}
-  if(!confirm('REAL CHARGE: Do you authorize charging this card $1.00 USD?'))return;
-  btn.disabled=true;
-  try{
-   msg('Verifying card securely with Square Production...');
-   const t=await prodCard.tokenize({amount:'1.00',currencyCode:'USD',intent:'CHARGE',customerInitiated:true,sellerKeyedIn:false});
-   if(t.status!=='OK')throw new Error('Card tokenization failed. Check the card fields.');
-   const r=await fetch('/.netlify/functions/production-test',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sourceId:t.token,testKey:key,confirmRealCharge:true,idempotencyKey:crypto.randomUUID()})});
-   const data=await r.json();if(!r.ok||!data.ok)throw new Error(data.message+(data.code?' ('+data.code+')':''));
-   msg('SUCCESS: REAL $1.00 production payment '+data.status+'. Payment ID: '+data.paymentId+'. Verify it in your live Square Dashboard.');
-   btn.textContent='Test completed';
-  }catch(error){msg('Live payment failed: '+error.message);btn.disabled=false}
- });
-})();
-</script>
-</body></html>
