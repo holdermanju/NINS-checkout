@@ -10,7 +10,7 @@ const PACKAGES = Object.freeze({
   },
   premium: {
     name: "Premium Security Equipment",
-    amount: 4236016
+    amount: 3910522
   }
 });
 
@@ -38,7 +38,8 @@ export default async function handler(request) {
     return reply({
       mode: "production",
       ready: Boolean(token),
-      realPaymentsEnabled: Boolean(token)
+      realPaymentsEnabled: Boolean(token),
+      packageAmounts: { mid: PACKAGES.mid.amount, premium: PACKAGES.premium.amount }
     });
   }
 
@@ -121,7 +122,13 @@ export default async function handler(request) {
   }
 
   // The server chooses the amount.
-  // Browser-supplied prices are ignored.
+  // Reject stale pages that show a different amount from the server.
+  if (input.amountCents !== chosenPackage.amount) {
+    return reply({
+      ok: false,
+      message: "The checkout price has changed. Refresh the page and review the current total."
+    }, 409);
+  }
   const amount = chosenPackage.amount;
 
   try {
